@@ -204,7 +204,7 @@ include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
             $.ajax({
                 url:"src/login/index.php",
                 type:"POST",
-                typeData:"json",
+                dataType:"json",
                 data:{
                     acao:'login',
                     login,
