@@ -1,5 +1,5 @@
 <?php
-    include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
+    include("lib/includes.php");
 
     //Agora tudo vai começar!!!
 
