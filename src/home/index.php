@@ -1,5 +1,5 @@
 <?php
-    include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
+    include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
 ?>
 <div id="paginaHomeTopo"></div>
 <div id="paginaHomeLateral"></div>

