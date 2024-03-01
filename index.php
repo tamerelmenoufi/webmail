@@ -1,5 +1,5 @@
 <?php
-    include("lib/includes.php");
+    include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
 
     //Agora tudo vai começar!!!
 
