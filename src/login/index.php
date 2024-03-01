@@ -214,6 +214,9 @@ include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
                         Carregando('none');
                     }
 
+                },
+                error:function(){
+                    console.log('Ocorreu um erro!')
                 }
             });
         };
