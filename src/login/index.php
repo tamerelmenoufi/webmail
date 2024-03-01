@@ -183,6 +183,7 @@ include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
             </div> -->
             <a href="#" class="forgot-password">
                 Esqueceu a senha?
+                <?="{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php"?>
             </a>
         </div><!-- /card-container -->
     </div><!-- /container -->
