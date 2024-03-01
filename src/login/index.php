@@ -197,17 +197,17 @@ include("{$_SERVER['DOCUMENT_ROOT']}/bkManaus/lib/includes.php");
             $.ajax({
                 url:"src/login/index.php",
                 type:"POST",
-                typeData:"json",
+                // typeData:"json",
                 data:{
                     acao:'login',
                     login,
                     senha
                 },
                 success:function(dados){
-                    // let retorno = JSON.parse(dados);
+                    let retorno = JSON.parse(dados);
                     // $.alert(dados.sucesso);
-                    console.log(dados.appLogin);
-                    if(dados.appLogin > 0){
+                    console.log(retorno.appLogin);
+                    if(retorno.appLogin > 0){
                         window.location.href='./';
                     }else{
                         $.alert('Ocorreu um erro.<br>Favor confira os dados do login.')
