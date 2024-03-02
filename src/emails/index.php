@@ -10,7 +10,7 @@
         $dados = json_decode($d->mailgun);
         print_r($dados);
         echo $dados->from."<br>";
-        echo $dados->to."<br>";
+        echo $dados->To."<br>";
         echo $dados->domain."<br>";
         echo $dados->subject."<br>";
         echo $dados->`body-html`."<hr>";
