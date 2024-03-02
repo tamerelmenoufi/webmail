@@ -8,7 +8,7 @@
     while($d = mysqli_fetch_object($result)){
 
         $dados = json_decode($d->mailgun);
-        print_r($dados);
+        // print_r($dados);
         echo $dados->from."<br>";
         // echo $dados->To."<br>";
         // echo $dados->domain."<br>";
