@@ -5,4 +5,4 @@
     $con = AppConnect('api_mailgun');
     $md5 = md5(date("YmdHis"));
 
-    $urlPainel = 'http://emails.mohatron.com/';
+    $urlPainel = 'http://webmail.mohatron.com/';
