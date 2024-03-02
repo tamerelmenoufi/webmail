@@ -1,9 +1,6 @@
 <?php
     include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
 
-    echo "TESTE";
-    exit();
-
     //Agora tudo vai começar!!!
 
     if($_GET['s']){
