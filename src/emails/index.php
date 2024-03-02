@@ -13,7 +13,7 @@
         echo $dados->To."<br>";
         echo $dados->domain."<br>";
         echo $dados->subject."<br>";
-        echo $dados->"body-html"."<hr>";
+        echo $dados->("body-html")."<hr>";
 
         echo "<br><br><br>";
     }
