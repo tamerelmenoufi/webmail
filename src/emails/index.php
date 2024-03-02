@@ -2,7 +2,7 @@
     include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
 
 
-echo     $query = "select * from webhook where mailgun->>'$.To' != '' and mailgun->>'$.To' not null order by codigo desc limit 10";
+echo     $query = "select * from webhook where mailgun->>'$.To' != '' and mailgun->>'$.To' is not null order by codigo desc limit 10";
     $result = mysqli_query($con, $query);
 
     while($d = mysqli_fetch_object($result)){
