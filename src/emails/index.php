@@ -9,11 +9,11 @@ echo     $query = "select * from webhook where mailgun->>'$.To' != '' and mailgu
 
         $dados = json_decode($d->mailgun);
         
-        echo $dados->from."<br>";
-        echo $dados->to."<br>";
-        echo $dados->domain."<br>";
-        echo $dados->subject."<br>";
-        echo $dados->`body-html`."<hr>";
+        echo $dados['from']."<br>";
+        echo $dados['to']."<br>";
+        echo $dados['domain']."<br>";
+        echo $dados["subject"]."<br>";
+        echo $dados['body-html']."<hr>";
 
         echo "<br><br><br>";
     }
