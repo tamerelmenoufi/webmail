@@ -9,11 +9,12 @@
 
         $dados = json_decode($d->mailgun);
         // print_r($dados);
+        $html = "body-html";
         echo $dados->from."<br>";
         echo $dados->To."<br>";
         echo $dados->domain."<br>";
         echo $dados->subject."<br>";
-        echo $dados->body-html."<hr>";
+        echo $dados->$html."<hr>";
 
         echo "<br><br><br>";
     }
