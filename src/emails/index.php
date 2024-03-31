@@ -124,7 +124,10 @@
                     </div>
                 </div>
                 <div class="d-none d-md-block col-md-8 relativo">
-                    <iframe class="exibeEmail" src="#"></iframe>
+                    <div class="exibeEmail">
+                        <iframe class="conteudo" src="#"></iframe>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -146,6 +149,11 @@
             }
         });
 
+        //ajuste das medidas do iframe
+        l = $(".exibeEmail").height();
+        a = $(".exibeEmail").width();
+        $(".conteudo").attr("width", l);
+        $(".conteudo").attr("height", a);
 
 	 var lastScrollTop = 0, delta = 5;
 	 $(".listaEntrada").scroll(function(){
@@ -195,7 +203,7 @@
 
      $(document).off('click').on('click','div[abrir]', function(){
         codigo = $(this).attr("abrir");
-        $(".exibeEmail").attr("src", `src/emails/email.php?codigo=${codigo}`);
+        $(".conteudo").attr("src", `src/emails/email.php?codigo=${codigo}`);
      })     
 
      $("a[escrever]").click(function(){
