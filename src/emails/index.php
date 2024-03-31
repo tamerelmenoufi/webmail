@@ -63,6 +63,9 @@
         padding:0;
         overflow:auto;
     }
+    .ItemEmail div i{
+        cursor:pointer;
+    }
 </style>
 <div class="pagina">
 
