@@ -10,9 +10,16 @@
     $query = "select * from webhook where mailgun->>'$.To' != '' and mailgun->>'$.To' is not null order by codigo desc limit ".(($_POST['limit'])?:'0').", 20 ";
     $result = mysqli_query($con, $query);
 
+
     while($d = mysqli_fetch_object($result)){
 
-        $dados = json_decode($d->mailgun);
+        if(!$dados){
+            $dados = json_decode($d->mailgun);
+            var_dump($dados);
+        }else{
+            $dados = json_decode($d->mailgun);
+        }
+        
         // print_r($dados);
         // $html = "body-html";
         // echo $dados->from."<br>";
