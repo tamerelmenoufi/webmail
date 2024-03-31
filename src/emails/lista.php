@@ -15,7 +15,7 @@
 
         if(!$dados){
             $dados = json_decode($d->mailgun);
-            var_dump($dados);
+            // var_dump($dados);
         }else{
             $dados = json_decode($d->mailgun);
         }
@@ -43,6 +43,7 @@
         <div class="p-2 d-flex flex-column align-items-start flex-grow-1">
             <h5><?=$dados->from?></h5>
             <span><?=$dados->subject?></span>
+            <span><?=$dados->Date?></span>
         </div>
         <div class="p-2">
             <i class="fa-solid fa-computer d-none d-md-block"></i>
