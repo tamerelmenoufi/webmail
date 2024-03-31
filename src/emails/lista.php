@@ -61,6 +61,11 @@
     $(function(){
         Carregando('none')
 
+
+        $(document).off('click').on('click','.ItemEmail div i', function(){
+            alert('teste');
+        })     
+
     });
 
 </script>
