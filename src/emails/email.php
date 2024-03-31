@@ -5,5 +5,5 @@
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
 
-    echo $dados->$html;
+    echo $d->$html;
 
