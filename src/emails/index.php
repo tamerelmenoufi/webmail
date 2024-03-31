@@ -39,7 +39,9 @@
         right:0;
         background-color:#fff;
         border:solid 1px red;
-        overflow:auto;
+        overflow:none;
+        margin:0;
+        padding:0;
     }
 
     .ItemEmail div h5{
@@ -55,6 +57,11 @@
         color:#333;
         padding:0;
         margin:0;
+    }
+    .conteudo{
+        margin:0;
+        padding:0;
+        overflow:auto;
     }
 </style>
 <div class="pagina">
