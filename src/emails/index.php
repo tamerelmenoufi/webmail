@@ -207,11 +207,10 @@
 
 	 });
 
+     $(document).off('click').on('click','.ItemEmail div i', function(){
+        alert('teste';)
+     })     
 
-     $(document).off('click').on('click','.ItemEmail', function(){
-        alert('ação aqui');
-        
-     })
 
      $(document).off('click').on('click','div[abrir]', function(){
         codigo = $(this).attr("abrir");
