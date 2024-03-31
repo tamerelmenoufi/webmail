@@ -15,7 +15,7 @@
 
         if(!$dados){
             $dados = json_decode($d->mailgun);
-            // var_dump($dados);
+            var_dump($dados);
         }else{
             $dados = json_decode($d->mailgun);
         }
