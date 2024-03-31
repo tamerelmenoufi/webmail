@@ -148,7 +148,7 @@
         Carregando('none')
 
         $.ajax({
-            url:"src/email/lista.php",
+            url:"src/emails/lista.php",
             success:function(dados){
                 $(".listaEntrada ul").append(dados);
             }
@@ -164,7 +164,7 @@
             console.log(`${nowScrollTop} de ${altura}`)
             Carregando()
             $.ajax({
-                url:"src/email/lista.php",
+                url:"src/emails/lista.php",
                 success:function(dados){
                     $(".listaEntrada ul").append(dados);
                 }
