@@ -13,7 +13,7 @@
     }
     .relativo{
         position:relative;
-        height:100%;
+        /* height:100%; */
     }
     .listaEntradaAcoes{
         position:absolute;
@@ -37,7 +37,8 @@
         top:0px;
         bottom:0;
         right:0;
-        background-color:green;
+        background-color:#fff;
+        border:solid 1px red;
         overflow:auto;
     }
 
