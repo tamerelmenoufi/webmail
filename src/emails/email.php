@@ -1,0 +1,1 @@
+Aqui o conteúdo do código <?=$_GET['codigo']?>

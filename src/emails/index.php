@@ -124,15 +124,7 @@
                     </div>
                 </div>
                 <div class="d-none d-md-block col-md-8 relativo">
-                    <div class="exibeEmail">
-                        <?php
-                        for($i=0;$i<100;$i++){
-                        ?>
-                        Exibição dos e-mails<br>
-                        <?php
-                        }
-                        ?>
-                    </div>
+                    <iframe class="exibeEmail" src="#"></iframe>
                 </div>
             </div>
         </div>
@@ -200,6 +192,11 @@
      $(document).off('click').on('click','.ItemEmail div i', function(){
         alert('ação aqui');
      })
+
+     $(document).off('click').on('click','div[abrir]', function(){
+        codigo = $(this).attr("abrir");
+        $(".exibeEmail").attr("src", `src/emails/email.php?codigo=${codigo}`);
+     })     
 
      $("a[escrever]").click(function(){
         $.alert('Agora vai ser escrito um e-mail');

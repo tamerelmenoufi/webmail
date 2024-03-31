@@ -40,7 +40,7 @@
                 <!-- <label class="form-check-label" for="exampleCheck1">Marcar Todos</label> -->
             </div>
         </div>
-        <div class="p-2 d-flex flex-column align-items-start flex-grow-1">
+        <div class="p-2 d-flex flex-column align-items-start flex-grow-1" abrir="<?=$d->codigo?>">
             <h5><?=$dados->from?></h5>
             <span><?=$dados->subject?></span>
             <span><?=$dados->Date?></span>
