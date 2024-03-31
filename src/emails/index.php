@@ -119,7 +119,7 @@
                         </div>
 
                     </div>
-                    <div class="listaEntrada">
+                    <div class="listaEntrada" limit="0">
                         <ul class="list-group list-group-flush"></ul>
                     </div>
                 </div>
@@ -163,8 +163,15 @@
         if((nowScrollTop) >= (altura - 10)){
             console.log(`${nowScrollTop} de ${altura}`)
             Carregando()
+            limit = $(".listaEntrada").attr("limit");
+            limit = (limit*1 + 20);
+            $(".listaEntrada").attr("limit",limit);
             $.ajax({
                 url:"src/emails/lista.php",
+                type:"POST",
+                data:{
+                    limit
+                },
                 success:function(dados){
                     $(".listaEntrada ul").append(dados);
                 }

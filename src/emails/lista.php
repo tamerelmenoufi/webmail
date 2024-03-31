@@ -7,7 +7,7 @@
 <?php
 
 
-    $query = "select * from webhook where mailgun->>'$.To' != '' and mailgun->>'$.To' is not null order by codigo desc limit 10";
+    $query = "select * from webhook where mailgun->>'$.To' != '' and mailgun->>'$.To' is not null order by codigo desc limit ".(($_POST['limit'])?:'0').", 20 ";
     $result = mysqli_query($con, $query);
 
     while($d = mysqli_fetch_object($result)){
