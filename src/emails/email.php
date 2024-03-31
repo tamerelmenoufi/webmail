@@ -6,6 +6,6 @@
     $d = mysqli_fetch_object($result);
 
     $dados = json_decode($d->mailgun);
-
+    var_dump($dados);
     echo $dados->$html;
 
