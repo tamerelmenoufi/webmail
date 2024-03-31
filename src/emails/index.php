@@ -205,11 +205,7 @@
 		//  lastScrollTop = nowScrollTop;
 		//  }
 
-	 });
-
-     $(document).off('click').on('click','.ItemEmail div i', function(){
-        alert('teste');
-     })     
+	 });   
 
 
      $(document).off('click').on('click','div[abrir]', function(){
