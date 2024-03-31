@@ -162,7 +162,6 @@
         a = $(".exibeEmail").height();
         $(".conteudo").attr("width", l);
         $(".conteudo").attr("height", a);
-        console.log(`w: ${l} e h: ${a}`)
 
 	 var lastScrollTop = 0, delta = 5;
 	 $(".listaEntrada").scroll(function(){
