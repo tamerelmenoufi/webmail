@@ -208,8 +208,9 @@
 	 });
 
 
-     $(document).off('click').on('click','.ItemEmail div i', function(){
+     $(document).off('click').on('click','.acao', function(){
         alert('ação aqui');
+
      })
 
      $(document).off('click').on('click','div[abrir]', function(){
