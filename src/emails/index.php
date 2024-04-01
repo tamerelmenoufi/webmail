@@ -136,7 +136,7 @@
                 </div>
                 <div class="d-none d-md-block col-md-8 relativo">
                     <div class="exibeEmail">
-                        <!-- <iframe class="conteudo"></iframe> -->
+                        <iframe class="conteudo"></iframe>
                     </div>
                 </div>
             </div>
@@ -213,7 +213,7 @@
 
      $(document).off('click').on('click','div[abrir]', function(){
         codigo = $(this).attr("abrir");
-        // $(".conteudo").attr("src", `src/emails/email.php?codigo=${codigo}`);
+        $(".conteudo").attr("src", `src/emails/email.php?codigo=${codigo}`);
      })  
 
      $("a[escrever]").click(function(){
