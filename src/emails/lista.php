@@ -67,7 +67,7 @@
         // });
 
 
-        $(document).off('click').on('click',"div[acao]", function(){
+        $(document).off('click').on('click',"i[acao]", function(){
             $.alert('teste')
         });
 
