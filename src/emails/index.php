@@ -208,15 +208,6 @@
 	 });   
 
 
-     $(document).off('click').on('click',"div[acao]", function(){
-        $.alert('teste')
-     });
-
-     $(document).off('click').on('click','div[abrir]', function(){
-        codigo = $(this).attr("abrir");
-        $(".conteudo").attr("src", `src/emails/email.php?codigo=${codigo}`);
-     });
-
      $("a[escrever]").click(function(){
         $.alert('Agora vai ser escrito um e-mail');
      });
