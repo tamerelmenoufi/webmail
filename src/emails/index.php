@@ -65,6 +65,7 @@
     }
     .ItemEmail div i{
         cursor:pointer;
+        z-index:9;
     }
 </style>
 <div class="pagina">
