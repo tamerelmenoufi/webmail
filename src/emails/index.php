@@ -206,7 +206,7 @@
 
 	 });   
 
-     $(document).off('click').on('click','i[acao]', function(){
+     $(document).off('click').on('click','div[acao]', function(){
         // console.log('Desenvolvimento em destaque!')
         alert('teste');
      })     

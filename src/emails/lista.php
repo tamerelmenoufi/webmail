@@ -45,7 +45,7 @@
             <span><?=$dados->subject?></span>
             <span><?=$dados->Date?></span>
         </div>
-        <div class="p-2">
+        <div acao class="p-2">
             <i acao class="fa-solid fa-computer d-none d-md-block"></i>
             <i acao class="fa-solid fa-mobile-screen-button d-block d-sm-none"></i>
         </div>
