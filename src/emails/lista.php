@@ -61,15 +61,15 @@
     $(function(){
         Carregando('none')
 
-        $('div[abrir]').off('click').on('click','div[abrir]', function(){
+        $(document).off('click').on('click','div[abrir]', function(){
             codigo = $(this).attr("abrir");
             $(".conteudo").attr("src", `src/emails/email.php?codigo=${codigo}`);
-        });
-
-
-        $("i[acao]").off('click').on('click',"i[acao]", function(){
+        }).on('click',"i[acao]", function(){
             $.alert('teste')
-        });
+        });;
+
+
+       // $(document).off('click')
 
     });
 
