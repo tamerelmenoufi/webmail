@@ -60,15 +60,17 @@
 
     $(function(){
         Carregando('none')
-        
-        $(document).off('click').on('click',"div[acao]", function(){
-            $.alert('teste')
-        });
 
         $(document).off('click').on('click','div[abrir]', function(){
             codigo = $(this).attr("abrir");
             $(".conteudo").attr("src", `src/emails/email.php?codigo=${codigo}`);
         });
+
+
+        $(document).off('click').on('click',"div[acao]", function(){
+            $.alert('teste')
+        });
+
     });
 
 </script>
