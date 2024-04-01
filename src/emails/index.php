@@ -206,7 +206,7 @@
 
 	 });   
 
-     $(document).off('click').on('click','.ItemEmail div i', function(){
+     $(document).off('click').on('click','i[acao]', function(){
         // console.log('Desenvolvimento em destaque!')
         alert('teste');
      })     
