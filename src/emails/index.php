@@ -207,7 +207,7 @@
 	 });   
 
      $(document).off('click').on('click',".ItemEmail div i", function(){
-        console.log('Desenvolvimento');
+        $.alert('teste')
      });
 
      
