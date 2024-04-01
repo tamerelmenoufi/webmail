@@ -207,8 +207,8 @@
 	 });   
 
      $(document).off('click').on('click','div[acao]', function(){
-        // console.log('Desenvolvimento em destaque!')
-        alert('teste');
+         console.log('Desenvolvimento em destaque!')
+        //alert('teste');
      })     
 
      $(document).off('click').on('click','div[abrir]', function(){
