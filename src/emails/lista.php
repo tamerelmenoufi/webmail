@@ -67,9 +67,9 @@
         });
 
 
-        $(document).off('click').on('click',"div[acao]", function(){
-            $.alert('teste')
-        });
+        // $(document).off('click').on('click',"div[acao]", function(){
+        //     $.alert('teste')
+        // });
 
     });
 
