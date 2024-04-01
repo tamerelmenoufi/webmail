@@ -63,7 +63,7 @@
         padding:0;
         overflow:auto;
     }
-    .ItemEmail div i{
+    i[acao]{
         cursor:pointer;
         z-index:9;
     }
@@ -207,11 +207,10 @@
 
 	 });   
 
-     $(document).off('click').on('click',".ItemEmail div i", function(){
+
+     $(document).off('click').on('click',"div[acao]", function(){
         $.alert('teste')
      });
-
-     
 
      $(document).off('click').on('click','div[abrir]', function(){
         codigo = $(this).attr("abrir");

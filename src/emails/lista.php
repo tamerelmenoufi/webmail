@@ -46,8 +46,8 @@
             <span><?=$dados->Date?></span>
         </div>
         <div class="p-2">
-            <i class="fa-solid fa-computer d-none d-md-block"></i>
-            <i class="fa-solid fa-mobile-screen-button d-block d-sm-none"></i>
+            <i acao class="fa-solid fa-computer d-none d-md-block"></i>
+            <i acao class="fa-solid fa-mobile-screen-button d-block d-sm-none"></i>
         </div>
     </div>
 
@@ -60,11 +60,6 @@
 
     $(function(){
         Carregando('none')
-
-
-        $(document).off('click').on('click',".ItemEmail div i", function(){
-            $.alert('teste')
-        });
 
     });
 
