@@ -62,15 +62,7 @@
         Carregando('none')
 
 
-        $(document).off('click').on('click','.ItemEmail div i', function(){
-            console.log('Desenvolvimento em destaque!')
-            alert('teste');
-        })     
 
-        $(document).off('click').on('click','div[abrir]', function(){
-            codigo = $(this).attr("abrir");
-            // $(".conteudo").attr("src", `src/emails/email.php?codigo=${codigo}`);
-        })  
 
     });
 
