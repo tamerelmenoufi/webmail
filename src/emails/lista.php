@@ -61,13 +61,13 @@
     $(function(){
         Carregando('none')
 
-        $(document).off('click').on('click','div[abrir]', function(){
+        $('div[abrir]').off('click').on('click','div[abrir]', function(){
             codigo = $(this).attr("abrir");
             $(".conteudo").attr("src", `src/emails/email.php?codigo=${codigo}`);
         });
 
 
-        $(document).off('click').on('click',"i[acao]", function(){
+        $("i[acao]").off('click').on('click',"i[acao]", function(){
             $.alert('teste')
         });
 
