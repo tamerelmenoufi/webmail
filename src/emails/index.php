@@ -138,7 +138,6 @@
                     <div class="exibeEmail">
                         <!-- <iframe class="conteudo"></iframe> -->
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -206,9 +205,9 @@
 		//  }
 
 	 });   
-     
+
      $(document).off('click').on('click','.ItemEmail div i', function(){
-        console.log('Desenvolvimento em destaque!')
+        // console.log('Desenvolvimento em destaque!')
         alert('teste');
      })     
 
