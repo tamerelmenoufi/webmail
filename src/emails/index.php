@@ -206,9 +206,11 @@
 
 	 });   
 
-     $(document).off('click').on('click','i[acao]', function(){
+     $(document).off('click').on('click',".ItemEmail div i", function(){
         console.log('Desenvolvimento');
      });
+
+     
 
      $(document).off('click').on('click','div[abrir]', function(){
         codigo = $(this).attr("abrir");
