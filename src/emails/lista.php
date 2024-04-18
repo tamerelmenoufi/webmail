@@ -15,12 +15,7 @@ echo "{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php";
 
     while($d = mysqli_fetch_object($result)){
 
-        if(!$dados){
-            $dados = json_decode($d->mailgun);
-            // var_dump($d);
-        }else{
-            $dados = json_decode($d->mailgun);
-        }
+        $dados = json_decode(file_get_contents("/var/www/html/mailgun/emails/{$d->codigo}/dados.json"));
         
         // print_r($dados);
         // $html = "body-html";
