@@ -12,7 +12,8 @@
 
     while($d = mysqli_fetch_object($result)){
 
-        $dados = file_get_contents("http://mailgun.mohatron.com/emails/{$d->codigo}/dados.json");
+        echo "http://mailgun.mohatron.com/emails/{$d->codigo}/dados.json";
+        echo $dados = file_get_contents("http://mailgun.mohatron.com/emails/{$d->codigo}/dados.json");
         // echo $dados;
         // print_r($dados);
         // $html = "body-html";
