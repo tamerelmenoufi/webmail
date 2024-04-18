@@ -12,7 +12,7 @@
 
     while($d = mysqli_fetch_object($result)){
 
-        echo $dados = json_decode(file_get_contents("/var/www/html/mailgun/emails/{$d->codigo}/dados.json"));
+        echo $dados = (file_get_contents("/var/www/html/mailgun/emails/{$d->codigo}/dados.json"));
         
         // print_r($dados);
         // $html = "body-html";
