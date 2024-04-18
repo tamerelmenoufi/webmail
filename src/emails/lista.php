@@ -7,7 +7,9 @@
 <?php
 
 
-    $query = "select * from webhook where mailgun->>'$.To' != '' and mailgun->>'$.To' is not null order by codigo desc limit ".(($_POST['limit'])?:'0').", 20 ";
+echo "{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php";
+
+    $query = "select * from webhook order by codigo desc limit ".(($_POST['limit'])?:'0').", 20 ";
     $result = mysqli_query($con, $query);
 
 
