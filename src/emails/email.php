@@ -7,7 +7,7 @@
 
     $d1 = file_get_contents("http://mailgun.mohatron.com/emails/{$d->codigo}/dados.json");
 
-    $dados = json_decode();
+    $dados = json_decode($d1);
 
     $html = "body-html";
     echo $dados->$html;
