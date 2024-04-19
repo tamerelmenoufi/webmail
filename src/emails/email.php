@@ -1,5 +1,6 @@
 <?php
-        include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
+
+    include("{$_SERVER['DOCUMENT_ROOT']}/lib/includes.php");
 
     $query = "select * from webhook where codigo = '{$_GET['codigo']}'";
     $result = mysqli_query($con, $query);
@@ -9,6 +10,11 @@
 
     $dados = json_decode($d1);
 
+    $cid = "content-id-map";
+    $img_corpo = json_decode($dados->$cid);
+    print_r($img_corpo);
+
+
     $html = "body-html";
     echo $dados->$html;
 
@@ -16,4 +22,4 @@
     echo $d1;
     echo "</pre>";
 
-
+?>
