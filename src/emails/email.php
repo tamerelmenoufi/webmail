@@ -18,8 +18,4 @@
     $html = "body-html";
     echo $dados->$html;
 
-    echo "<pre>";
-    echo $d1;
-    echo "</pre>";
-
 ?>
