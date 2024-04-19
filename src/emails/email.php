@@ -5,8 +5,15 @@
     $result = mysqli_query($con, $query);
     $d = mysqli_fetch_object($result);
 
-    $dados = json_decode(file_get_contents("http://mailgun.mohatron.com/emails/{$d->codigo}/dados.json"));
+    $d1 = file_get_contents("http://mailgun.mohatron.com/emails/{$d->codigo}/dados.json");
+
+    $dados = json_decode();
 
     $html = "body-html";
     echo $dados->$html;
+
+    echo "<pre>";
+    echo $d1;
+    echo "</pre>";
+
 
